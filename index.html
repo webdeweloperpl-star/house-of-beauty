@@ -744,6 +744,72 @@
       color: #d4a099;
     }
 
+    /* SZKOLENIA */
+    .hob-kursy {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .hob-kurs {
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      padding: 40px 36px;
+      background: #111010;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s;
+      position: relative;
+    }
+
+    .hob-kurs::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201, 169, 110, 0.4), transparent);
+    }
+
+    .hob-kurs:hover {
+      border-color: rgba(201, 169, 110, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(201, 169, 110, 0.07);
+    }
+
+    .hob-kurs-tag {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+
+    .hob-kurs-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #f5f0eb;
+      line-height: 1.1;
+    }
+
+    .hob-kurs-desc {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: #a09880;
+      line-height: 1.8;
+      flex: 1;
+    }
+
+    .hob-kurs-cta {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: #c9a96e;
+      margin-top: 8px;
+    }
+
     /* REVIEWS */
     .hob-revs {
       display: grid;
@@ -1014,6 +1080,15 @@
         gap: 16px;
       }
 
+      .hob-kursy {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .hob-kurs {
+        padding: 28px 24px;
+      }
+
       .hob-revs {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -1079,6 +1154,7 @@
       <ul class="hob-nav-links">
         <li><a href="#hob-uslugi">Usługi</a></li>
         <li><a href="#hob-specs">Zespół</a></li>
+        <li><a href="#hob-szkolenia">Szkolenia</a></li>
         <li><a href="#hob-cennik">Cennik</a></li>
         <li><a href="#hob-opinie">Opinie</a></li>
         <li><a href="#hob-kontakt">Kontakt</a></li>
@@ -1091,6 +1167,7 @@
     <div class="hob-mmenu" id="hobMMenu">
       <a href="#hob-uslugi" onclick="hobClose()">Usługi</a>
       <a href="#hob-specs" onclick="hobClose()">Zespół</a>
+      <a href="#hob-szkolenia" onclick="hobClose()">Szkolenia</a>
       <a href="#hob-cennik" onclick="hobClose()">Cennik</a>
       <a href="#hob-opinie" onclick="hobClose()">Opinie</a>
       <a href="#hob-kontakt" onclick="hobClose()">Kontakt</a>
@@ -1203,6 +1280,43 @@
             <li class="hob-tag">Certyfikowane specjalistki</li>
           </ul>
         </div>
+      </div>
+    </div>
+
+    <!-- SZKOLENIA -->
+    <div id="hob-szkolenia" class="hob-s" style="max-width:1200px; margin:0 auto;">
+      <span class="hob-lbl hob-r">Akademia</span>
+      <h2 class="hob-ttl hob-r">Szkolenia <em>online</em></h2>
+      <div class="hob-ln hob-r"></div>
+      <p class="hob-body hob-r" style="max-width:640px; margin-bottom:52px;">Karolina Wasilewska prowadzi własną platformę szkoleniową dla stylistek rzęs na każdym poziomie zaawansowania. Kursy online dostępne w całej Polsce.</p>
+      <div class="hob-kursy">
+        <a href="https://www.szkoleniawasilewska.pl/pedzaca-akademia" target="_blank" class="hob-kurs hob-r">
+          <span class="hob-kurs-tag">Szkoła online</span>
+          <h3 class="hob-kurs-name">Pędząca Akademia</h3>
+          <p class="hob-kurs-desc">3-miesięczny program szkoleniowy dla stylistek rzęs. Kompleksowa wiedza od podstaw do mistrzostwa.</p>
+          <span class="hob-kurs-cta">Dowiedz się więcej →</span>
+        </a>
+        <a href="https://kursy.szkoleniawasilewska.pl/szkolenie-stylizacja-rzes-metoda-uv" target="_blank" class="hob-kurs hob-r">
+          <span class="hob-kurs-tag">Kurs online</span>
+          <h3 class="hob-kurs-name">Szkolenie UV</h3>
+          <p class="hob-kurs-desc">Stylizacja rzęs metodą UV. Nowoczesna technika dla zaawansowanych stylistek.</p>
+          <span class="hob-kurs-cta">Dowiedz się więcej →</span>
+        </a>
+        <a href="https://kursy.szkoleniawasilewska.pl/konsultacje-online" target="_blank" class="hob-kurs hob-r">
+          <span class="hob-kurs-tag">Kurs online</span>
+          <h3 class="hob-kurs-name">Rzęsowa rewolucja</h3>
+          <p class="hob-kurs-desc">Szkolenie techniczne — precyzja, szybkość i efektywność w stylizacji rzęs.</p>
+          <span class="hob-kurs-cta">Dowiedz się więcej →</span>
+        </a>
+        <a href="https://kursy.szkoleniawasilewska.pl/tempo-pracy" target="_blank" class="hob-kurs hob-r">
+          <span class="hob-kurs-tag">Kurs online</span>
+          <h3 class="hob-kurs-name">Tempo pracy</h3>
+          <p class="hob-kurs-desc">Jak pracować szybko bez utraty jakości. Praktyczny kurs dla pracujących stylistek.</p>
+          <span class="hob-kurs-cta">Dowiedz się więcej →</span>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:48px;">
+        <a href="https://www.szkoleniawasilewska.pl" target="_blank" class="hob-btn hob-r" style="opacity:1;animation:none;">Wszystkie szkolenia</a>
       </div>
     </div>
 
@@ -1527,6 +1641,9 @@
     });
     document.querySelectorAll('.hob-specs .hob-spec').forEach(function(el, i) {
       el.style.transitionDelay = (i * 0.15) + 's';
+    });
+    document.querySelectorAll('.hob-kursy .hob-kurs').forEach(function(el, i) {
+      el.style.transitionDelay = (i * 0.1) + 's';
     });
     document.querySelectorAll('.hob-revs .hob-rev').forEach(function(el, i) {
       el.style.transitionDelay = (i * 0.12) + 's';
