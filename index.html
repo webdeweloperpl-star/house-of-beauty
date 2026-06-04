@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House of Beauty | Karolina Wasilewska | Stylizacja Rzęs Suwałki</title>
+  <meta name="description"
+    content="Salon stylizacji rzęs, paznokci i brwi w Suwałkach. Karolina Wasilewska, mistrzyni branży, sędzia konkursów. ul. Pawła Suzina 10. Rezerwacje na Booksy.">
+  <meta property="og:title" content="House of Beauty | Karolina Wasilewska | Suwałki">
+  <meta property="og:description"
+    content="Salon stylizacji rzęs, paznokci i brwi w Suwałkach. Mistrzyni branży, certyfikowane stylistki.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "House of Beauty",
+  "description": "Salon stylizacji rzęs, paznokci i brwi w Suwałkach.",
+  "telephone": "+48576189924",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Pawła Suzina 10",
+    "addressLocality": "Suwałki",
+    "postalCode": "16-400",
+    "addressCountry": "PL"
+  },
+  "priceRange": "zł zł",
+  "sameAs": [
+    "https://www.facebook.com/HouseofBeautySuwalki",
+    "https://www.instagram.com/house.of.beauty.suwalki/"
+  ]
+}
+</script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #f5f0eb;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    #hob {
+      background: #0a0a0a;
+      color: #f5f0eb;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    #hob-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+      padding: 16px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(10, 10, 10, 0.98), transparent);
+    }
+
+    .hob-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .hob-logo img {
+      height: 52px;
+      width: auto;
+      border-radius: 4px;
+    }
+
+    .hob-nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .hob-nav-links a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c8bfb5;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .hob-nav-links a:hover {
+      color: #c9a96e;
+    }
+
+    /* HAMBURGER */
+    .hob-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 4px;
+      outline: none;
+    }
+
+    .hob-burger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: #c9a96e;
+      transition: all 0.3s;
+    }
+
+    .hob-burger.open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hob-burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hob-burger.open span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .hob-mmenu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.98);
+      z-index: 490;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+    }
+
+    .hob-mmenu.open {
+      display: flex;
+    }
+
+    .hob-mmenu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #f5f0eb;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .hob-mmenu a:hover {
+      color: #c9a96e;
+    }
+
+    /* HERO */
+    #hob-hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.75)),
+        url('images/rzesy.jpeg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 32px 80px;
+    }
+
+    #hob-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 55% at 50% 45%, rgba(201, 169, 110, 0.10) 0%, transparent 70%);
+      z-index: 1;
+    }
+
+    .hob-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(580px, 90vw);
+      height: min(580px, 90vw);
+      border: 1px solid rgba(201, 169, 110, 0.10);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .hob-circle::before {
+      content: '';
+      position: absolute;
+      inset: 30px;
+      border: 1px solid rgba(201, 169, 110, 0.05);
+      border-radius: 50%;
+    }
+
+    .hob-hero-inner {
+      position: relative;
+      z-index: 3;
+      max-width: 700px;
+    }
+
+    .hob-eyebrow {
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 28px;
+      display: block;
+      opacity: 0;
+      animation: hobUp 1s ease 0.2s both;
+    }
+
+    .hob-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(60px, 11vw, 108px);
+      font-weight: 300;
+      line-height: 0.92;
+      letter-spacing: 2px;
+      color: #f5f0eb;
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: hobUp 1s ease 0.4s both;
+    }
+
+    .hob-hero-title span {
+      display: block;
+      font-style: italic;
+      color: #dfc08a;
+    }
+
+    .hob-hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(16px, 2.5vw, 22px);
+      font-style: italic;
+      font-weight: 300;
+      color: #d4a099;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      opacity: 0;
+      animation: hobUp 1s ease 0.5s both;
+    }
+
+    .hob-hero-sub {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #c8bfb5;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: hobUp 1s ease 0.6s both;
+    }
+
+    .hob-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #c9a96e, transparent);
+      margin: 0 auto 28px;
+      opacity: 0;
+      animation: hobFade 1s ease 0.7s both;
+    }
+
+    .hob-btn {
+      display: inline-block;
+      padding: 16px 52px;
+      border: 1px solid #c9a96e;
+      color: #c9a96e;
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.4s;
+      opacity: 0;
+      animation: hobUp 1s ease 0.8s both;
+    }
+
+    .hob-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #c9a96e;
+      transform: translateX(-101%);
+      transition: transform 0.4s;
+      z-index: -1;
+    }
+
+    .hob-btn:hover {
+      color: #0a0a0a;
+    }
+
+    .hob-btn:hover::before {
+      transform: translateX(0);
+    }
+
+    @keyframes hobUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes hobFade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* REVEAL */
+    .hob-r {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .hob-r.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* SHARED SECTION STYLES */
+    .hob-s {
+      padding: 100px 48px;
+      background: #0a0a0a;
+    }
+
+    .hob-sf {
+      padding: 100px 0;
+      background: #111010;
+    }
+
+    .hob-si {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .hob-smax {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hob-lbl {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .hob-ttl {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(38px, 5vw, 60px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: #f5f0eb;
+      margin-bottom: 14px;
+    }
+
+    .hob-ttl em {
+      font-style: italic;
+      color: #dfc08a;
+    }
+
+    .hob-ln {
+      width: 36px;
+      height: 1px;
+      background: #c9a96e;
+      opacity: 0.7;
+      margin-bottom: 52px;
+    }
+
+    .hob-body {
+      font-family: 'Raleway', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #c8bfb5;
+      line-height: 1.9;
+      letter-spacing: 0.3px;
+    }
+
+    /* ABOUT */
+    #hob-about {
+      background: #111010;
+      padding: 100px 48px;
+    }
+
+    .hob-about-in {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* SERVICES */
+    .hob-svcs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(201, 169, 110, 0.15);
+      border: 1px solid rgba(201, 169, 110, 0.15);
+      overflow: hidden;
+    }
+
+    .hob-svc {
+      background: #111010;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hob-svc:hover {
+      background: #181614;
+    }
+
+    .hob-svc::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #c9a96e, transparent);
+      transform: scaleX(0);
+      transition: transform 0.4s;
+    }
+
+    .hob-svc:hover::after {
+      transform: scaleX(1);
+    }
+
+    .hob-svc-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .hob-svc-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      filter: brightness(0.85);
+    }
+
+    .hob-svc:hover .hob-svc-photo img {
+      transform: scale(1.04);
+      filter: brightness(1);
+    }
+
+    .hob-svc-body {
+      padding: 36px 40px 44px;
+    }
+
+    .hob-svc-n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px;
+      font-weight: 300;
+      color: rgba(201, 169, 110, 0.35);
+      line-height: 1;
+      display: block;
+      margin-bottom: -20px;
+    }
+
+    .hob-svc-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #f5f0eb;
+      margin-bottom: 14px;
+    }
+
+    .hob-svc-desc {
+      font-size: 13px;
+      color: #a09880;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+
+    .hob-svc-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: #c9a96e;
+    }
+
+    /* SPECIALISTS */
+    .hob-specs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .hob-spec {
+      border: 1px solid rgba(201, 169, 110, 0.25);
+      padding: 48px 40px;
+      background: #0a0a0a;
+      position: relative;
+      transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+      overflow: hidden;
+    }
+
+    .hob-spec::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201, 169, 110, 0.5), transparent);
+    }
+
+    .hob-spec:hover {
+      border-color: rgba(201, 169, 110, 0.6);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(201, 169, 110, 0.08);
+    }
+
+    .hob-tag {
+      transition: color 0.25s, padding-left 0.25s;
+    }
+
+    .hob-tag:hover {
+      color: #f5f0eb;
+      padding-left: 8px;
+    }
+
+    .hob-spec-badge {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      font-weight: 300;
+      color: rgba(201, 169, 110, 0.35);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hob-spec-role {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #d4a099;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .hob-spec-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 400;
+      color: #f5f0eb;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .hob-spec-ln {
+      width: 28px;
+      height: 1px;
+      background: rgba(201, 169, 110, 0.5);
+      margin-bottom: 20px;
+    }
+
+    .hob-tags {
+      list-style: none;
+      display: block;
+    }
+
+    .hob-tag {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+      display: block;
+      letter-spacing: 0;
+    }
+
+    .hob-tag:last-child {
+      border-bottom: none;
+    }
+
+    /* STAGGER ANIMATIONS */
+    .hob-svc.hob-r:nth-child(1) {
+      transition-delay: 0s;
+    }
+
+    .hob-svc.hob-r:nth-child(2) {
+      transition-delay: 0.15s;
+    }
+
+    .hob-svc.hob-r:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    .hob-spec.hob-r:nth-child(1) {
+      transition-delay: 0s;
+    }
+
+    .hob-spec.hob-r:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    /* PRICING TABS */
+    .hob-tab {
+      padding: 14px 30px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8a8078;
+      cursor: pointer;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      background: none;
+      transition: all 0.3s;
+    }
+
+    .hob-tab.active {
+      color: #c9a96e;
+      border-bottom-color: #c9a96e;
+    }
+
+    .hob-tab:hover:not(.active) {
+      color: #c8bfb5;
+    }
+
+    .hob-panel {
+      display: none;
+    }
+
+    .hob-panel.active {
+      display: block;
+    }
+
+    .hob-tbl {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .hob-tbl thead tr {
+      border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+    }
+
+    .hob-tbl thead th {
+      padding: 14px 20px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      font-weight: 400;
+      text-align: right;
+    }
+
+    .hob-tbl thead th:first-child {
+      text-align: left;
+    }
+
+    .hob-tbl tbody tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      transition: background 0.2s, opacity 0.4s ease, transform 0.4s ease;
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+
+    .hob-tbl tbody tr.on {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .hob-tbl tbody tr:hover {
+      background: rgba(201, 169, 110, 0.03);
+    }
+
+    .hob-tbl tbody td {
+      padding: 16px 20px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: #c8bfb5;
+      text-align: right;
+    }
+
+    .hob-tbl tbody td:first-child {
+      text-align: left;
+      color: #f5f0eb;
+    }
+
+    .hob-tbl td.pg {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: #c9a96e;
+    }
+
+    .hob-tbl td.pr {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: #d4a099;
+    }
+
+    /* REVIEWS */
+    .hob-revs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .hob-rev {
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      padding: 40px 32px;
+      background: #0a0a0a;
+      position: relative;
+    }
+
+    .hob-rev-q {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px;
+      font-weight: 300;
+      color: rgba(201, 169, 110, 0.1);
+      line-height: 1;
+    }
+
+    .hob-rev-stars {
+      color: #c9a96e;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .hob-rev-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 300;
+      font-style: italic;
+      color: #dfc08a;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .hob-rev-auth {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+
+    /* CONTACT */
+    #hob-contact {
+      background: #111010;
+      padding: 100px 0;
+    }
+
+    .hob-cont-in {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .hob-cont-item {
+      margin-bottom: 30px;
+    }
+
+    .hob-cont-lbl {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .hob-cont-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: #f5f0eb;
+      text-decoration: none;
+      display: block;
+      transition: color 0.2s;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+      padding-bottom: 3px;
+    }
+
+    .hob-cont-val:hover {
+      color: #c9a96e;
+      border-bottom-color: #c9a96e;
+    }
+
+    .hob-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hob-social-a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #c8bfb5;
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      padding: 9px 18px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .hob-social-a:hover {
+      color: #c9a96e;
+      border-color: #c9a96e;
+    }
+
+    .hob-cont-cta {
+      border: 1px solid rgba(201, 169, 110, 0.25);
+      padding: 56px 48px;
+      text-align: center;
+    }
+
+    .hob-cont-cta-t {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 300;
+      color: #f5f0eb;
+      margin-bottom: 10px;
+    }
+
+    .hob-cont-cta-s {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8a8078;
+      margin-bottom: 36px;
+      display: block;
+    }
+
+    /* FOOTER */
+    #hob-footer {
+      background: #0a0a0a;
+      padding: 48px;
+      text-align: center;
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hob-foot-logo-img {
+      height: 56px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    .hob-foot-sub {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #c8bfb5;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      #hob-nav {
+        padding: 14px 20px;
+      }
+
+      .hob-nav-links {
+        display: none;
+      }
+
+      .hob-burger {
+        display: flex;
+      }
+
+      .hob-logo img {
+        height: 42px;
+      }
+
+      #hob-hero {
+        padding: 20px 24px;
+        min-height: 100svh;
+      }
+
+      .hob-circle {
+        width: min(380px, 88vw);
+        height: min(380px, 88vw);
+      }
+
+      .hob-eyebrow {
+        font-size: 14px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        margin-bottom: 20px;
+      }
+
+      .hob-hero-title {
+        font-size: clamp(72px, 19vw, 120px);
+        margin-bottom: 20px;
+      }
+
+      .hob-hero-name {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+
+      .hob-hero-sub {
+        font-size: 9px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        margin-bottom: 20px;
+      }
+
+      .hob-divider {
+        margin: 28px auto 36px;
+      }
+
+      .hob-btn {
+        font-size: 16px;
+        padding: 20px 40px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        animation: hobUp 0.6s ease 0.9s both;
+      }
+
+      .hob-cont-cta {
+        padding: 40px 24px;
+      }
+
+      .hob-s {
+        padding: 64px 20px;
+      }
+
+      .hob-sf {
+        padding: 36px 0 64px;
+      }
+
+      .hob-si {
+        padding: 0 20px;
+      }
+
+      #hob-about {
+        padding: 48px 20px 28px;
+      }
+
+      #hob-contact {
+        padding: 64px 0;
+      }
+
+      #hob-footer {
+        padding: 40px 20px;
+      }
+
+      .hob-svcs {
+        grid-template-columns: 1fr;
+        gap: 1px;
+      }
+
+      .hob-specs {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .hob-revs {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .hob-cont-in {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+      }
+
+      .hob-tab {
+        padding: 12px 16px;
+        font-size: 9px;
+        letter-spacing: 2px;
+      }
+
+      .hob-ttl {
+        font-size: clamp(32px, 9vw, 48px);
+      }
+
+      .hob-foot-sub {
+        white-space: nowrap;
+        font-size: 9px;
+      }
+
+      .hob-spec {
+        padding: 32px 20px;
+      }
+
+      .hob-spec-badge {
+        font-size: 48px;
+        top: 16px;
+        right: 16px;
+      }
+
+      .hob-spec-name {
+        font-size: 26px;
+      }
+
+      .hob-svc-body {
+        padding: 28px 24px 36px;
+      }
+
+      .hob-svc-n {
+        font-size: 60px;
+      }
+
+      .hob-svc-name {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="hob">
+
+    <nav id="hob-nav">
+      <a href="#" class="hob-logo">
+        <img src="images/logo.jpg" alt="House of Beauty Karolina Wasilewska">
+      </a>
+      <ul class="hob-nav-links">
+        <li><a href="#hob-uslugi">Usługi</a></li>
+        <li><a href="#hob-specs">Zespół</a></li>
+        <li><a href="#hob-cennik">Cennik</a></li>
+        <li><a href="#hob-opinie">Opinie</a></li>
+        <li><a href="#hob-kontakt">Kontakt</a></li>
+      </ul>
+      <button class="hob-burger" id="hobBurger" onclick="hobMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="hob-mmenu" id="hobMMenu">
+      <a href="#hob-uslugi" onclick="hobClose()">Usługi</a>
+      <a href="#hob-specs" onclick="hobClose()">Zespół</a>
+      <a href="#hob-cennik" onclick="hobClose()">Cennik</a>
+      <a href="#hob-opinie" onclick="hobClose()">Opinie</a>
+      <a href="#hob-kontakt" onclick="hobClose()">Kontakt</a>
+    </div>
+
+    <!-- HERO -->
+    <div id="hob-hero">
+      <div class="hob-circle"></div>
+      <div class="hob-hero-inner">
+        <span class="hob-eyebrow">Rzęsy · Brwi · Paznokcie · Suwałki</span>
+        <h1 class="hob-hero-title">House<br><span>of Beauty</span></h1>
+        <p class="hob-hero-name">Karolina Wasilewska</p>
+        <p class="hob-hero-sub">Certyfikowane stylistki · Mistrzynie branży</p>
+        <div class="hob-divider"></div>
+        <a href="https://booksy.com/pl-pl/246443_house-of-beauty_paznokcie_6623_suwalki" target="_blank"
+          class="hob-btn">Umów wizytę</a>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="hob-about">
+      <div class="hob-about-in">
+        <span class="hob-lbl hob-r">O nas</span>
+        <h2 class="hob-ttl hob-r">Pasja. <em>Precyzja.</em> Mistrzostwo.</h2>
+        <div class="hob-ln hob-r" style="margin: 0 auto 40px;"></div>
+        <p class="hob-body hob-r">Salon założyła Karolina Wasilewska, wielokrotna mistrzyni, sędzia, instruktor i
+          prelegent branżowy, organizator prestiżowych mistrzostw beauty. Właścicielka <em style="color:#d4a099;">Szkoły
+            dla Elity</em>, instruktorów stylizacji rzęs. Nasz zespół tworzą silne, zdecydowane i pewne swojego fachu
+          Kobiety.</p>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div id="hob-uslugi" class="hob-sf">
+      <div class="hob-si">
+        <span class="hob-lbl hob-r">Nasze usługi</span>
+        <h2 class="hob-ttl hob-r">Sztuka <em>piękna</em></h2>
+        <div class="hob-ln hob-r"></div>
+        <div class="hob-svcs">
+          <div class="hob-svc hob-r">
+            <div class="hob-svc-photo">
+              <img src="images/rzesy.jpeg" alt="Stylizacja rzęs House of Beauty Suwałki">
+            </div>
+            <div class="hob-svc-body">
+              <span class="hob-svc-n">01</span>
+              <h3 class="hob-svc-name">Stylizacja Rzęs</h3>
+              <p class="hob-svc-desc">Przedłużanie i zagęszczanie rzęs metodami klasycznymi i objętościowymi. Metody
+                1:1, 2D, 3D, 4-6D, Wet Look, Wispy Effect.</p>
+              <span class="hob-svc-price">od 160,– zł</span>
+            </div>
+          </div>
+          <div class="hob-svc hob-r">
+            <div class="hob-svc-photo">
+              <img src="images/paznokcie.jpeg" alt="Stylizacja paznokci House of Beauty Suwałki">
+            </div>
+            <div class="hob-svc-body">
+              <span class="hob-svc-n">02</span>
+              <h3 class="hob-svc-name">Stylizacja Paznokci</h3>
+              <p class="hob-svc-desc">Manicure żelowy, hybrydowy, French konstrukcyjny, przedłużanie na szablonie.
+                Precyzja w każdym detalu.</p>
+              <span class="hob-svc-price">od 100,– zł</span>
+            </div>
+          </div>
+          <div class="hob-svc hob-r">
+            <div class="hob-svc-photo">
+              <img src="images/brwi.jpg" alt="Stylizacja brwi House of Beauty Suwałki">
+            </div>
+            <div class="hob-svc-body">
+              <span class="hob-svc-n">03</span>
+              <h3 class="hob-svc-name">Stylizacja Brwi</h3>
+              <p class="hob-svc-desc">Henna pudrowa, laminacja, architektura brwi, regulacja. Brwi jako rama dla
+                spojrzenia.</p>
+              <span class="hob-svc-price">od 30,– zł</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPECIALISTS -->
+    <div id="hob-specs" class="hob-s" style="max-width:1200px; margin:0 auto;">
+      <span class="hob-lbl hob-r">Nasz zespół</span>
+      <h2 class="hob-ttl hob-r">Pasja i <em>profesjonalizm</em></h2>
+      <div class="hob-ln hob-r"></div>
+      <div class="hob-specs">
+        <div class="hob-spec hob-r">
+          <span class="hob-spec-role">Właścicielka · Mistrzyni Branży</span>
+          <h3 class="hob-spec-name">Karolina Wasilewska</h3>
+          <div class="hob-spec-ln"></div>
+          <ul class="hob-tags">
+            <li class="hob-tag">Stylizacja rzęs</li>
+            <li class="hob-tag">Stylizacja brwi</li>
+            <li class="hob-tag">Stylizacja paznokci</li>
+            <li class="hob-tag">Instruktor szkoleniowy</li>
+            <li class="hob-tag">Sędzia konkursów</li>
+            <li class="hob-tag">Organizator mistrzostw</li>
+          </ul>
+        </div>
+        <div class="hob-spec hob-r">
+          <span class="hob-spec-badge">+8</span>
+          <span class="hob-spec-role">Certyfikowane stylistki</span>
+          <h3 class="hob-spec-name">Nasz zespół</h3>
+          <div class="hob-spec-ln"></div>
+          <ul class="hob-tags">
+            <li class="hob-tag">Stylizacja rzęs</li>
+            <li class="hob-tag">Uzupełnienia</li>
+            <li class="hob-tag">Henna rzęs</li>
+            <li class="hob-tag">Stylizacja paznokci</li>
+            <li class="hob-tag">Stylizacja brwi</li>
+            <li class="hob-tag">Certyfikowane specjalistki</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div id="hob-cennik" class="hob-sf">
+      <div class="hob-si">
+        <span class="hob-lbl hob-r">Transparentne ceny</span>
+        <h2 class="hob-ttl hob-r"><em>Cennik</em> usług</h2>
+        <div class="hob-ln hob-r"></div>
+        <div class="hob-tabs">
+          <button class="hob-tab active" onclick="hobTab('rz',this)">Stylizacja Rzęs</button>
+          <button class="hob-tab" onclick="hobTab('paz',this)">Paznokcie</button>
+          <button class="hob-tab" onclick="hobTab('brw',this)">Brwi</button>
+        </div>
+        <div id="htab-rz" class="hob-panel active">
+          <table class="hob-tbl">
+            <thead>
+              <tr>
+                <th>Usługa</th>
+                <th>Stylistka</th>
+                <th>Karolina</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Metoda 1:1</td>
+                <td class="pg">180,–</td>
+                <td class="pr">200,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie 1:1</td>
+                <td class="pg">160,–</td>
+                <td class="pr">180,–</td>
+              </tr>
+              <tr>
+                <td>Metoda 2D</td>
+                <td class="pg">190,–</td>
+                <td class="pr">210,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie 2D</td>
+                <td class="pg">170,–</td>
+                <td class="pr">190,–</td>
+              </tr>
+              <tr>
+                <td>Metoda 2-3D</td>
+                <td class="pg">210,–</td>
+                <td class="pr">230,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie 2-3D</td>
+                <td class="pg">190,–</td>
+                <td class="pr">210,–</td>
+              </tr>
+              <tr>
+                <td>Metoda 3D</td>
+                <td class="pg">220,–</td>
+                <td class="pr">240,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie 3D</td>
+                <td class="pg">200,–</td>
+                <td class="pr">220,–</td>
+              </tr>
+              <tr>
+                <td>Metoda 3-4D</td>
+                <td class="pg">240,–</td>
+                <td class="pr">260,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie 3-4D</td>
+                <td class="pg">220,–</td>
+                <td class="pr">240,–</td>
+              </tr>
+              <tr>
+                <td>Metoda 4-6D</td>
+                <td class="pg">260,–</td>
+                <td class="pr">280,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie 4-6D</td>
+                <td class="pg">240,–</td>
+                <td class="pr">260,–</td>
+              </tr>
+              <tr>
+                <td>Wet Look</td>
+                <td class="pg">190,–</td>
+                <td class="pr">210,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie Wet Look</td>
+                <td class="pg">170,–</td>
+                <td class="pr">190,–</td>
+              </tr>
+              <tr>
+                <td>Wispy Effect</td>
+                <td class="pg">200,–</td>
+                <td class="pr">220,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie Wispy</td>
+                <td class="pg">180,–</td>
+                <td class="pr">200,–</td>
+              </tr>
+              <tr>
+                <td>Ściągnięcie rzęs</td>
+                <td class="pg">50,–</td>
+                <td class="pr">50,–</td>
+              </tr>
+              <tr>
+                <td>Henna rzęs</td>
+                <td class="pg">60,–</td>
+                <td class="pr">&mdash;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="htab-paz" class="hob-panel">
+          <table class="hob-tbl">
+            <thead>
+              <tr>
+                <th>Usługa</th>
+                <th>Cena</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Przedłużenie żelowe (do 2 kratek)</td>
+                <td class="pg">180,–</td>
+              </tr>
+              <tr>
+                <td>Przedłużenie żelowe (powyżej 2 kratek)</td>
+                <td class="pg">200,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie (do 2 kratek)</td>
+                <td class="pg">160,–</td>
+              </tr>
+              <tr>
+                <td>Uzupełnienie (powyżej 2 kratek)</td>
+                <td class="pg">180,–</td>
+              </tr>
+              <tr>
+                <td>Żel na naturalnej płytce</td>
+                <td class="pg">150,–</td>
+              </tr>
+              <tr>
+                <td>French konstrukcyjny</td>
+                <td class="pg">260,–</td>
+              </tr>
+              <tr>
+                <td>Hybryda</td>
+                <td class="pg">140,–</td>
+              </tr>
+              <tr>
+                <td>Dorobienie paznokcia</td>
+                <td class="pg">15,–</td>
+              </tr>
+              <tr>
+                <td>Zdjęcie hybrydowej / żelowej</td>
+                <td class="pg">30 / 40,–</td>
+              </tr>
+              <tr>
+                <td>Opracowanie skórek</td>
+                <td class="pg">60,–</td>
+              </tr>
+              <tr>
+                <td>Manicure japoński</td>
+                <td class="pg">100,–</td>
+              </tr>
+              <tr>
+                <td>Zdobienia</td>
+                <td class="pg">od 10,–</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="htab-brw" class="hob-panel">
+          <table class="hob-tbl">
+            <thead>
+              <tr>
+                <th>Usługa</th>
+                <th>Cena</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Henna + regulacja</td>
+                <td class="pg">70,–</td>
+              </tr>
+              <tr>
+                <td>Farbka + regulacja</td>
+                <td class="pg">80,–</td>
+              </tr>
+              <tr>
+                <td>Laminacja brwi</td>
+                <td class="pg">150,–</td>
+              </tr>
+              <tr>
+                <td>Laminacja brwi z farbką</td>
+                <td class="pg">170,–</td>
+              </tr>
+              <tr>
+                <td>Henna pudrowa z regulacją</td>
+                <td class="pg">120,–</td>
+              </tr>
+              <tr>
+                <td>Regulacja brwi</td>
+                <td class="pg">50,–</td>
+              </tr>
+              <tr>
+                <td>Depilacja</td>
+                <td class="pg">30,–</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVIEWS -->
+    <div id="hob-opinie" class="hob-s" style="max-width:1200px; margin:0 auto;">
+      <span class="hob-lbl hob-r">Opinie klientek</span>
+      <h2 class="hob-ttl hob-r">Co mówią o <em>nas</em></h2>
+      <div class="hob-ln hob-r"></div>
+      <div class="hob-revs">
+        <div class="hob-rev hob-r">
+          <span class="hob-rev-q">"</span>
+          <span class="hob-rev-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+          <p class="hob-rev-text">Najlepszy salon w Suwałkach. Karolina to prawdziwa artystka, rzęsy trzymają się
+            rewelacyjnie, efekt przerasta oczekiwania.</p>
+          <span class="hob-rev-auth">Anna K.</span>
+        </div>
+        <div class="hob-rev hob-r">
+          <span class="hob-rev-q">"</span>
+          <span class="hob-rev-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+          <p class="hob-rev-text">Klimat salonu jest niesamowity. Czujesz się jak w luksusowym miejscu, a stylistki
+            zawsze dopasowują efekt do twarzy.</p>
+          <span class="hob-rev-auth">Marta W.</span>
+        </div>
+        <div class="hob-rev hob-r">
+          <span class="hob-rev-q">"</span>
+          <span class="hob-rev-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+          <p class="hob-rev-text">Paznokcie od Karoliny to czysta sztuka. Dbałość o detal i precyzja na najwyższym
+            poziomie. Wracam regularnie.</p>
+          <span class="hob-rev-auth">Joanna P.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="hob-kontakt">
+      <div id="hob-contact">
+        <div class="hob-cont-in">
+          <div>
+            <span class="hob-lbl hob-r">Znajdź nas</span>
+            <h2 class="hob-ttl hob-r"><em>Kontakt</em></h2>
+            <div class="hob-ln hob-r"></div>
+            <div class="hob-cont-item hob-r">
+              <span class="hob-cont-lbl">Telefon</span>
+              <a href="tel:+48576189924" class="hob-cont-val">576 189 924</a>
+            </div>
+            <div class="hob-cont-item hob-r">
+              <span class="hob-cont-lbl">Adres</span>
+              <a href="https://share.google/nByINsqKgctdzYXoy" target="_blank" class="hob-cont-val">ul. Pawła Suzina 10,
+                Suwałki</a>
+            </div>
+            <div class="hob-cont-item hob-r">
+              <span class="hob-cont-lbl">Rezerwacje online</span>
+              <a href="https://booksy.com/pl-pl/246443_house-of-beauty_paznokcie_6623_suwalki" target="_blank"
+                class="hob-cont-val">Booksy</a>
+            </div>
+            <div class="hob-social hob-r">
+              <a href="https://www.facebook.com/HouseofBeautySuwalki?locale=pl_PL" target="_blank"
+                class="hob-social-a">Facebook</a>
+              <a href="https://www.instagram.com/house.of.beauty.suwalki/" target="_blank"
+                class="hob-social-a">Instagram</a>
+            </div>
+          </div>
+          <div class="hob-cont-cta hob-r">
+            <h3 class="hob-cont-cta-t">Zarezerwuj wizytę</h3>
+            <span class="hob-cont-cta-s">Szybko · Wygodnie · Online</span>
+            <a href="https://booksy.com/pl-pl/246443_house-of-beauty_paznokcie_6623_suwalki" target="_blank"
+              class="hob-btn" style="opacity:1;animation:none;">Umów na Booksy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="hob-footer">
+      <img src="images/logo.jpg" alt="House of Beauty" class="hob-foot-logo-img">
+      <span class="hob-foot-sub">Karolina Wasilewska · ul. Pawła Suzina 10, Suwałki</span>
+    </div>
+
+  </div>
+
+  <script>
+    function hobMenu() {
+      document.getElementById('hobBurger').classList.toggle('open');
+      document.getElementById('hobMMenu').classList.toggle('open');
+    }
+    function hobClose() {
+      document.getElementById('hobBurger').classList.remove('open');
+      document.getElementById('hobMMenu').classList.remove('open');
+    }
+    function hobTab(id, btn) {
+      document.querySelectorAll('.hob-panel').forEach(function (p) { p.classList.remove('active'); });
+      document.querySelectorAll('.hob-tab').forEach(function (t) { t.classList.remove('active'); });
+      var panel = document.getElementById('htab-' + id);
+      panel.classList.add('active');
+      btn.classList.add('active');
+      panel.querySelectorAll('tbody tr').forEach(function (tr) {
+        tr.classList.remove('on');
+        tr.offsetHeight;
+        setTimeout(function () { tr.classList.add('on'); }, 10);
+      });
+    }
+    // Stagger dla kart usług, zespołu i opinii
+    document.querySelectorAll('.hob-svcs .hob-svc').forEach(function(el, i) {
+      el.style.transitionDelay = (i * 0.12) + 's';
+    });
+    document.querySelectorAll('.hob-specs .hob-spec').forEach(function(el, i) {
+      el.style.transitionDelay = (i * 0.15) + 's';
+    });
+    document.querySelectorAll('.hob-revs .hob-rev').forEach(function(el, i) {
+      el.style.transitionDelay = (i * 0.12) + 's';
+    });
+    document.querySelectorAll('.hob-tbl tbody tr').forEach(function(tr, i) {
+      tr.style.transitionDelay = (i * 0.04) + 's';
+    });
+
+    // IntersectionObserver - wyzwala gdy element jest 10% widoczny
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('on');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    document.querySelectorAll('.hob-r, .hob-tbl tbody tr').forEach(function(el) {
+      obs.observe(el);
+    });
+  </script>
+</body>
+
+</html>
