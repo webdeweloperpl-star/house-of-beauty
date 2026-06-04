@@ -319,6 +319,22 @@
       transform: translateX(0);
     }
 
+    .hob-hero-link {
+      display: block;
+      margin-top: 18px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+      opacity: 0;
+      animation: hobFade 0.8s ease 1.2s both;
+    }
+
+    .hob-hero-link:hover { color: #c9a96e; }
+
     @keyframes hobUp {
       from {
         opacity: 0;
@@ -1184,6 +1200,7 @@
         <div class="hob-divider"></div>
         <a href="https://booksy.com/pl-pl/246443_house-of-beauty_paznokcie_6623_suwalki" target="_blank"
           class="hob-btn">Umów wizytę</a>
+        <a href="#hob-szkolenia" class="hob-hero-link">Szkolenia online →</a>
       </div>
     </div>
 
@@ -1248,7 +1265,7 @@
     </div>
 
     <!-- SPECIALISTS -->
-    <div id="hob-specs" class="hob-s" style="max-width:1200px; margin:0 auto;">
+    <div id="hob-specs" class="hob-s" style="max-width:1200px; margin:0 auto; padding-bottom:40px;">
       <span class="hob-lbl hob-r">Nasz zespół</span>
       <h2 class="hob-ttl hob-r">Pasja i <em>profesjonalizm</em></h2>
       <div class="hob-ln hob-r"></div>
@@ -1284,39 +1301,27 @@
     </div>
 
     <!-- SZKOLENIA -->
-    <div id="hob-szkolenia" class="hob-s" style="max-width:1200px; margin:0 auto;">
+    <div id="hob-szkolenia" class="hob-s" style="max-width:1200px; margin:0 auto; padding-top:40px;">
       <span class="hob-lbl hob-r">Akademia</span>
       <h2 class="hob-ttl hob-r">Szkolenia <em>online</em></h2>
       <div class="hob-ln hob-r"></div>
       <p class="hob-body hob-r" style="max-width:640px; margin-bottom:52px;">Karolina Wasilewska prowadzi własną platformę szkoleniową dla stylistek rzęs na każdym poziomie zaawansowania. Kursy online dostępne w całej Polsce.</p>
       <div class="hob-kursy">
-        <a href="https://www.szkoleniawasilewska.pl/pedzaca-akademia" target="_blank" class="hob-kurs hob-r">
-          <span class="hob-kurs-tag">Szkoła online</span>
-          <h3 class="hob-kurs-name">Pędząca Akademia</h3>
-          <p class="hob-kurs-desc">3-miesięczny program szkoleniowy dla stylistek rzęs. Kompleksowa wiedza od podstaw do mistrzostwa.</p>
-          <span class="hob-kurs-cta">Dowiedz się więcej →</span>
+        <a href="https://www.szkoleniawasilewska.pl/szkolenia-stacjonarne/" target="_blank" class="hob-kurs hob-r">
+          <span class="hob-kurs-tag">Stacjonarne</span>
+          <h3 class="hob-kurs-name">Szkolenia stacjonarne</h3>
+          <p class="hob-kurs-desc">Szkolenia prowadzone w Suwałkach oraz Warszawie. Praca w małych grupach pod okiem Karoliny Wasilewskiej.</p>
+          <span class="hob-kurs-cta">Zobacz terminy →</span>
         </a>
-        <a href="https://kursy.szkoleniawasilewska.pl/szkolenie-stylizacja-rzes-metoda-uv" target="_blank" class="hob-kurs hob-r">
-          <span class="hob-kurs-tag">Kurs online</span>
-          <h3 class="hob-kurs-name">Szkolenie UV</h3>
-          <p class="hob-kurs-desc">Stylizacja rzęs metodą UV. Nowoczesna technika dla zaawansowanych stylistek.</p>
-          <span class="hob-kurs-cta">Dowiedz się więcej →</span>
-        </a>
-        <a href="https://kursy.szkoleniawasilewska.pl/konsultacje-online" target="_blank" class="hob-kurs hob-r">
-          <span class="hob-kurs-tag">Kurs online</span>
-          <h3 class="hob-kurs-name">Rzęsowa rewolucja</h3>
-          <p class="hob-kurs-desc">Szkolenie techniczne — precyzja, szybkość i efektywność w stylizacji rzęs.</p>
-          <span class="hob-kurs-cta">Dowiedz się więcej →</span>
-        </a>
-        <a href="https://kursy.szkoleniawasilewska.pl/tempo-pracy" target="_blank" class="hob-kurs hob-r">
-          <span class="hob-kurs-tag">Kurs online</span>
-          <h3 class="hob-kurs-name">Tempo pracy</h3>
-          <p class="hob-kurs-desc">Jak pracować szybko bez utraty jakości. Praktyczny kurs dla pracujących stylistek.</p>
-          <span class="hob-kurs-cta">Dowiedz się więcej →</span>
+        <a href="https://www.szkoleniawasilewska.pl/szkolenia-online/" target="_blank" class="hob-kurs hob-r">
+          <span class="hob-kurs-tag">Online</span>
+          <h3 class="hob-kurs-name">Szkolenia online</h3>
+          <p class="hob-kurs-desc">Kursy i programy szkoleniowe dostępne z całej Polski. Ucz się w swoim tempie od mistrzyni branży.</p>
+          <span class="hob-kurs-cta">Zobacz kursy →</span>
         </a>
       </div>
       <div style="text-align:center; margin-top:48px;">
-        <a href="https://www.szkoleniawasilewska.pl" target="_blank" class="hob-btn hob-r" style="opacity:1;animation:none;">Wszystkie szkolenia</a>
+        <a href="https://www.szkoleniawasilewska.pl" target="_blank" class="hob-btn hob-r" style="opacity:1;animation:none;">Platforma szkoleniowa</a>
       </div>
     </div>
 
